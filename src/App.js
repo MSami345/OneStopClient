@@ -28,7 +28,7 @@ function App() {
       }
       // Making a GET request
       const response = await fetch(
-        process.env.REACT_APP_API_URL + "/verifyUser",
+        "https://one-stop-server.vercel.app/verifyUser",
         {
           method: "GET",
           headers: {

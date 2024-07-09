@@ -3,7 +3,7 @@ import axios from "axios";
 const logout = async () => {
     console.log("first")
   try {
-    const response = await axios.get(process.env.REACT_APP_API_URL + "/api/auth/logout", {
+    const response = await axios.get("https://one-stop-server.vercel.app/api/auth/logout", {
       withCredentials: true,
     });
 

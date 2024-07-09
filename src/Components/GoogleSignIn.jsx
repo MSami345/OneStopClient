@@ -7,7 +7,6 @@ import { jwtDecode } from "jwt-decode";
 const GoogleSignIn = () => {
   const responseMessage = async (response) => {
     const data = await jwtDecode(response.credential);
-    console.log( process.env.REACT_APP_API_URL + "/api/google/googleLogin");
     try {
       const apiResponse = await axios.post(
         "https://one-stop-server.vercel.app/api/google/googleLogin",

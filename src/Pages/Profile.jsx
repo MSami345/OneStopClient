@@ -31,7 +31,7 @@ const Profile = () => {
   const fetchUserData = async () => {
     try {
       const { data } = await axios.get(
-        process.env.REACT_APP_API_URL + `/api/v1/profile/${userId}`,
+       `https://one-stop-server.vercel.app/api/v1/profile/${userId}`,
         { withCredentials: true }
       );
       setUser(data);
@@ -100,7 +100,7 @@ const Profile = () => {
 
     try {
       await axios.put(
-        process.env.REACT_APP_API_URL+`/api/v1/profile/${userId}`,
+        `https://one-stop-server.vercel.app/api/v1/profile/${userId}`,
         {
           ...user,
           profileImage: profileImageUrl,

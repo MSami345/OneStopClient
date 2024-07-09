@@ -28,7 +28,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        process.env.REACT_APP_API_URL + "/api/auth/login",
+        "https://one-stop-server.vercel.app/api/auth/login",
         {
           email: formData.email,
           password: formData.password,

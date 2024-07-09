@@ -90,7 +90,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post(process.env.REACT_APP_API_URL+"/api/auth/register", {
+      await axios.post("https://one-stop-server.vercel.app/api/auth/register", {
         firstName,
         lastName,
         email,
