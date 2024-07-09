@@ -34,7 +34,7 @@ function App() {
           headers: {
             "Content-Type": "application/json",
           },
-          withCredentials: true,
+          credentials: "include",
         }
       );
       if (!response.ok) {
