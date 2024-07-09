@@ -27,12 +27,16 @@ function App() {
         return false;
       }
       // Making a GET request
-      const response = await fetch(process.env.REACT_APP_API_URL + "/verifyUser", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        process.env.REACT_APP_API_URL + "/verifyUser",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
       if (!response.ok) {
         logout();
         return false;
