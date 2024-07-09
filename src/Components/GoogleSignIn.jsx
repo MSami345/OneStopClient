@@ -7,7 +7,7 @@ import { jwtDecode } from "jwt-decode";
 const GoogleSignIn = () => {
   const responseMessage = async (response) => {
     const data = await jwtDecode(response.credential);
-    console.log("first");
+    console.log( process.env.REACT_APP_API_URL + "/api/google/googleLogin");
     try {
       const apiResponse = await axios.post(
         process.env.REACT_APP_API_URL + "/api/google/googleLogin",
