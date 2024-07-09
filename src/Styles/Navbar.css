@@ -1,0 +1,147 @@
+* {
+  transition: all 0.3s;
+}
+
+.nav {
+  background-color: #053330;
+  padding: 5px 10px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.logo {
+  /* font-size: 2rem; */
+  font-weight: bold;
+  color: white;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo img {
+  width: 60px;
+  height: 45px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+
+.nav-links a:hover {
+  background-color: #55b5b274;
+  border-radius: 20px;
+}
+
+.cart-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* width: 250px; */
+  /* background-color: #0b4442; */
+  font-size: 1.5rem;
+}
+
+.cart-icon a {
+  text-decoration: none;
+  color: white;
+}
+
+.cart:hover {
+  color: #ccc;
+  font-size: 1.45rem;
+}
+
+.btnLogin {
+  background-color: #0b4442;
+  width: 80px;
+  margin-left: 20px;
+  padding: 10px 5px;
+}
+
+.btnLogin:hover {
+  background-color: #135755;
+  transform: scale(1.05);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #053330;
+    padding: 15px 0px;
+  }
+
+  .nav-links a:hover {
+    padding: 10px 10px;
+  }
+
+  .open {
+    background-color: #0b4442;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    transition: all 0.2s;
+    z-index: 1;
+    /* padding-block-end: 10px; */
+  }
+
+  .nav-links li {
+    margin: 5px;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: 15px;
+  }
+
+  .cart-icon {
+    font-size: 1.2rem;
+  }
+}
