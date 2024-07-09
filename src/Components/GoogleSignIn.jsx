@@ -10,7 +10,7 @@ const GoogleSignIn = () => {
     console.log( process.env.REACT_APP_API_URL + "/api/google/googleLogin");
     try {
       const apiResponse = await axios.post(
-        process.env.REACT_APP_API_URL + "/api/google/googleLogin",
+        "https://one-stop-server.vercel.app/api/google/googleLogin",
         {
           email: data.email,
           firstName: data.given_name,
